@@ -1,0 +1,11 @@
+disabled_rules: 
+  - line_length
+excluded: 
+  - Carthage
+  - Pods
+custom_rules:
+  no_fatal_errors:
+    name: "Don't use fatalError()"
+    regex: "fatalError"
+    severity: error
+    
