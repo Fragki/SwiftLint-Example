@@ -1,0 +1,5 @@
+language: swift
+osx_image: xcode10.2
+xcode_project: BankStatement.xcodeproj
+xcode_scheme: BankStatement
+script: xcodebuild clean build test -project BankStatement.xcodeproj -scheme BankStatement
