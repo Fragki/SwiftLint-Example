@@ -6,8 +6,6 @@
 //  Copyright © 2019 Fragkiskos Katsimpas. All rights reserved.
 //
 
-import Foundation
-
 import XCTest
 @testable import BankStatement
 
