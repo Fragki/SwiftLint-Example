@@ -1,15 +1,8 @@
 language: swift
 os: osx
 osx_image: xcode10.2
-
-language: swift
-osx_image: xcode10.2
-install: brew install danger/tap/danger-swift
 xcode_project: BankStatement.xcodeproj
 xcode_scheme: BankStatement
-- script: danger-swift ci
-- script: xcodebuild clean build test -project BankStatement.xcodeproj -scheme BankStatement ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO   CODE_SIGN_IDENTITY=""
-
 
 # prepare dependency managers
 before_install:
@@ -25,3 +18,8 @@ jobs:
       name: "Code validation"
       script:
         - bundle exec danger
+        
+   - stage: "Test"
+      name: "Unit tests"
+      script:
+        - xcodebuild clean build test -project BankStatement.xcodeproj -scheme BankStatement ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO   CODE_SIGN_IDENTITY=""

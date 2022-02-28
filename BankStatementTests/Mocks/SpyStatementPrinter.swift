@@ -9,7 +9,7 @@
 import Foundation
 @testable import BankStatement
 
-final class SpyStatementPrinter: StatementPrinter {
+class SpyStatementPrinter: StatementPrinter {
 
     private(set) var addPrintCalls: [[Transaction]] = []
     override func print(transactions: [Transaction]) {
