@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,6 +31,8 @@
 		0C85E6802275F7D000F70F66 /* TestableClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C85E67F2275F7D000F70F66 /* TestableClock.swift */; };
 		0C85E6842275FA0C00F70F66 /* TransactionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C85E6832275FA0C00F70F66 /* TransactionFactory.swift */; };
 		0C85E6862275FE2300F70F66 /* TransactionFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C85E6852275FE2300F70F66 /* TransactionFactoryTests.swift */; };
+		1454EDD427CD8DBA0013F332 /* Danger in Frameworks */ = {isa = PBXBuildFile; productRef = 1454EDD327CD8DBA0013F332 /* Danger */; };
+		1454EDD627CD8DBA0013F332 /* danger-swift in Frameworks */ = {isa = PBXBuildFile; productRef = 1454EDD527CD8DBA0013F332 /* danger-swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1454EDD427CD8DBA0013F332 /* Danger in Frameworks */,
+				1454EDD627CD8DBA0013F332 /* danger-swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +255,10 @@
 			dependencies = (
 			);
 			name = BankStatement;
+			packageProductDependencies = (
+				1454EDD327CD8DBA0013F332 /* Danger */,
+				1454EDD527CD8DBA0013F332 /* danger-swift */,
+			);
 			productName = BankStatement;
 			productReference = 0C85E61B2274A42C00F70F66 /* BankStatement.framework */;
 			productType = "com.apple.product-type.framework";
@@ -321,6 +329,9 @@
 				en,
 			);
 			mainGroup = 0C85E6112274A42C00F70F66;
+			packageReferences = (
+				1454EDD227CD8DBA0013F332 /* XCRemoteSwiftPackageReference "swift" */,
+			);
 			productRefGroup = 0C85E61C2274A42D00F70F66 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -576,6 +587,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.trikalabs.BankStatement;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -605,6 +617,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.trikalabs.BankStatement;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -730,6 +743,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1454EDD227CD8DBA0013F332 /* XCRemoteSwiftPackageReference "swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danger/swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1454EDD327CD8DBA0013F332 /* Danger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1454EDD227CD8DBA0013F332 /* XCRemoteSwiftPackageReference "swift" */;
+			productName = Danger;
+		};
+		1454EDD527CD8DBA0013F332 /* danger-swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1454EDD227CD8DBA0013F332 /* XCRemoteSwiftPackageReference "swift" */;
+			productName = "danger-swift";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0C85E6122274A42C00F70F66 /* Project object */;
 }
