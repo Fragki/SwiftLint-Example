@@ -16,7 +16,7 @@ class TransactionsRepository {
         transactions.append(transcaction)
     }
 
-   func addWithdraw(_ transcaction: Transaction) {
+    func addWithdraw(_ transcaction: Transaction) {
         transactions.append(transcaction)
     }
 
